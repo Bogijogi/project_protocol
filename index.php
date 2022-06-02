@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protokoły</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="scripts/script.php" method="get">
-        <select name="protocols" >
+    <form method="get">
+        <h2><p>Wybierz protokoł do opisania</p></h2>
+        <select name="id" >
             <option value="" disabled="disabled" selected="true">--Select--</option>
-            <option value="ftp">FTP</option>
-            <option value="http">HTTP</option>
-        </select><br>
-        <input type="button" id="button" value="Potwierdź">
+            <option value="1">FTP</option>
+            <option value="2">HTTP</option>
+        </select><br><br>
+        <input type="submit" id="button" value="Potwierdź">
     </form>
+    <div id="result">
+    <?php
+        require_once './scripts/script.php';
+    ?>
+    </div>
 </body>
 </html>
